@@ -1,14 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-
 const app = express();
 
-let corsOption = {
-    origin: true
-};
-
-app.use(cors(corsOption));
+app.use(cors());
 
 // parse request of content-type - application/json
 app.use(bodyParser.json());
